@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Navigation with singleton</string>
+
+    <string name="next">次へ</string>
+    <string name="back">戻る</string>
+    <string name="input_name">名前を入力してください。</string>
+    <string name="input_email">メールアドレスを入力してください。</string>
+    <string name="confirm_information">入力内容を確認してください。</string>
+    <string name="name">名前</string>
+    <string name="email">メールアドレス</string>
+</resources>
