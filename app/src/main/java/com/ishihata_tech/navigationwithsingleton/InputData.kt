@@ -1,6 +1,6 @@
 package com.ishihata_tech.navigationwithsingleton
 
-class InputData {
+class InputData private constructor() {
     companion object {
         private var instance: InputData? = null
 
