@@ -7,15 +7,21 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.ishihata_tech.navigationwithsingleton.databinding.FragmentCBinding
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class CFragment : Fragment() {
+    @Inject
+    lateinit var inputData: InputData
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         val binding = FragmentCBinding.inflate(layoutInflater, container, false)
-        binding.textInputName.text = InputData.getInstance().name
-        binding.textInputEmail.text = InputData.getInstance().email
+        binding.textInputName.text = inputData.name
+        binding.textInputEmail.text = inputData.email
         binding.buttonBack.setOnClickListener {
             findNavController().popBackStack()
         }
